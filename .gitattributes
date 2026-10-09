@@ -1,0 +1,4 @@
+* text=auto
+*.xsa binary
+*.bit binary
+*.patch -text

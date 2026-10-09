@@ -1,0 +1,26 @@
+From f451243cdcefbeb7a75e7fe8c06269e7824509b2 Mon Sep 17 00:00:00 2001
+From: taehwankim <mrkiwi77@gmail.com>
+Date: Thu, 8 Oct 2026 10:18:58 +0000
+Subject: [PATCH 3/3] drm: xlnx: add digilent,hdmi to the component list
+
+Since the 6.x rebase xlnx_drv only adds remote nodes of the display
+pipeline to the component match when their compatible is listed in
+xlnx_compatible_components_list. Without this entry the Digilent HDMI
+encoder never binds to the xlnx,pl-disp CRTC and no connector is
+created.
+---
+ drivers/gpu/drm/xlnx/xlnx_drv.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/gpu/drm/xlnx/xlnx_drv.c b/drivers/gpu/drm/xlnx/xlnx_drv.c
+index f4aaf2df1..51dddcb84 100644
+--- a/drivers/gpu/drm/xlnx/xlnx_drv.c
++++ b/drivers/gpu/drm/xlnx/xlnx_drv.c
+@@ -325,6 +325,7 @@ static const char * const xlnx_compatible_components_list[] = {
+ 	"xlnx,vpss-scaler-2.2",
+ 	"xlnx,sdi-tx",
+ 	"xlnx,bridge-v-tc-6.1",
++	"digilent,hdmi",
+ };
+ 
+ static bool xlnx_check_compatible_component(struct device_node *node)

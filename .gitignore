@@ -1,0 +1,22 @@
+# Vivado
+hw/proj/
+*.jou
+*.log
+*.str
+.Xil/
+hw/repo/cache/
+
+# PetaLinux (PetaLinux 템플릿 .gitignore 기준)
+os/build/
+os/images/
+os/pre-built/
+os/components/
+os/.petalinux/*
+!os/.petalinux/metadata
+os/project-spec/hw-description/extracted/
+*/*/*.old
+*.o
+*.deb
+
+# PetaLinux 설치본/인스톨러는 저장소에 넣지 않음
+petalinux-v*-installer.run
