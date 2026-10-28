@@ -1,5 +1,12 @@
 # Zybo Z7-20 — PetaLinux / Vivado 2025.2
 
+## Note
+
+This repository is based on Digilent Demo and contains software from Digilent, modified to fit to Petalinux 2025.2.
+Please refer to the note below for details.
+This work is done by Claude, and although I tested and confirmed device recognition (HDMI, LAN), many features such as Pcam interface are not verified (and I have no plan to do so), so use it at your own risk.
+This work is distributed with BSD Clause-3 License. If there's license confilct with upstream code, feel free to let me know.
+
 Digilent [Zybo Z7-20 PetaLinux 데모](https://digilent.com/reference/programmable-logic/zybo-z7/demos/petalinux)를
 Vivado 2025.2 / PetaLinux 2025.2 (linux-xlnx 6.12) 로 옮긴 작업본.
 출발점이 된 Digilent 커밋은 [`docs/UPSTREAM.md`](docs/UPSTREAM.md), 바뀐 내용은 [`docs/MIGRATION.md`](docs/MIGRATION.md).
